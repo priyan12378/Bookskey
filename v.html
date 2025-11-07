@@ -1,0 +1,45 @@
+<input id="input">
+<button onclick="wwe()">
+    add
+</button>
+<ul id="order">
+    <li>hello
+    <button onclick="delet(event)">delete</button>
+    </li>
+</ul>
+
+
+<script>
+    var ww=document.getElementById("order")
+    var wwc=document.getElementById("input")
+    function wwe(){
+        var ss=document.createElement("li")
+        ss.innerHTML=wwc.value +"<button onclick='delet(event)'>delete</button>"
+        ww.append(ss)
+
+    }
+    function delet(event){
+        event.target.parentElement.remove()
+    }
+</script>
+
+<!-- 
+<input id="input">
+<button onclick="addItem()">
+    add
+</button>
+<ul id="order">
+    <li>hello</li>
+</ul>
+
+<script>
+    var list = document.getElementById("order");
+    var input = document.getElementById("input");
+
+    function addItem() {
+        var li = document.createElement("li");
+        li.textContent = input.value;
+        list.append(li);
+        input.value = ""; // optional: clear input after adding
+    }
+</script> -->

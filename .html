@@ -1,0 +1,28 @@
+<h1>Guess the number</h1>
+<input id="guess">
+<button onclick="s()">add</button>
+<p id="result" >result</p>
+<p id="score">score:10</p
+
+
+<!-- <script></script> -->
+<script>
+    var guess =document.getElementById("guess")
+    var score =document.getElementById("score")
+    var result =document.getElementById("result")
+    var a=Math.floor(Math.random()*10)
+    var total=10
+    function s()
+    {
+        var wwe=guess.value
+        if(wwe==a){
+            result.textContent="right"
+            alert('wwe')
+        }
+        else{
+            total=total-1
+            score.textContent="score:"+total
+            result.textContent="wrong"
+        }
+    }
+</script>
